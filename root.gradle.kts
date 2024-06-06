@@ -1,12 +1,9 @@
-import gg.essential.gradle.util.versionFromBuildIdAndBranch
-
 plugins {
-    kotlin("jvm") version "1.6.0" apply false
-    id("gg.essential.multi-version.root")
+    kotlin("jvm") version "1.9.10" apply false
+    id("org.polyfrost.multi-version.root")
+    id("com.github.johnrengelman.shadow") version "7.1.2" apply false
 }
 
-version = versionFromBuildIdAndBranch()
-
 preprocess {
-    "1.8.9"(10809, "srg")
+    "1.8.9-forge"(10809, "srg")
 }
